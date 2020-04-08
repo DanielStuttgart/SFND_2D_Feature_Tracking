@@ -52,4 +52,27 @@ if (bFocusOnVehicle)
 ### MP.4 Add more keypoint descriptors
 See code for more information. Caution: It is not possible to randomly use each keypoint detector with each keypoint descriptor. (E.g. SIFT-keypoint detector does not work with ORB keypoint descriptor. SIFT- and ORB-keypoint detector do not work with AKAZE keypoint descriptor).
 
-### MP.5 
+### MP.5 Add FLANN-matching
+See code for more information. 
+
+### MP.6 Add KNN match selection and perform descriptor distance ratio filtering
+Instead of directly using the detected matches, a descriptor distance ratio filtering is done: 
+```c++
+// k nearest neighbors (k=2)
+int k = 2;
+
+// need to store in own knn_matches
+std::vector< std::vector<cv::DMatch> > knn_matches;        
+matcher->knnMatch(descSource, descRef, knn_matches, k);
+
+// filter matches using the Lowe's ratio test
+// taken from https://docs.opencv.org/3.4/d5/d6f/tutorial_feature_flann_matcher.html
+const float ratio_thresh = 0.8f;        
+for (size_t i = 0; i < knn_matches.size(); i++)
+{
+    if (knn_matches[i][0].distance < ratio_thresh * knn_matches[i][1].distance)
+    {
+        matches.push_back(knn_matches[i][0]);
+    }
+}
+´´´
