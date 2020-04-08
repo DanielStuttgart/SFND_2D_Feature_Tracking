@@ -50,6 +50,6 @@ if (bFocusOnVehicle)
 ```
 
 ### MP.4 Add more keypoint descriptors
-See code for more information. Caution: SIFT-keypoint detector does not work with ORB keypoint descriptor.
+See code for more information. Caution: It is not possible to randomly use each keypoint detector with each keypoint descriptor. (E.g. SIFT-keypoint detector does not work with ORB keypoint descriptor. SIFT- and ORB-keypoint detector do not work with AKAZE keypoint descriptor).
 
 ### MP.5 
