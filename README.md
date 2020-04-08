@@ -75,4 +75,10 @@ for (size_t i = 0; i < knn_matches.size(); i++)
         matches.push_back(knn_matches[i][0]);
     }
 }
-´´´
+```
+
+### MP.7 Number of Keypoints for all images and distribution of their neighborhood size
+
+Your seventh task is to count the number of keypoints on the preceding vehicle for all 10 images and take note of the distribution of their neighborhood size. Do this for all the detectors you have implemented.
+
+
