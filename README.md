@@ -49,4 +49,7 @@ if (bFocusOnVehicle)
 }   
 ```
 
-### MP.4
+### MP.4 Add more keypoint descriptors
+See code for more information.
+
+### MP.5 
