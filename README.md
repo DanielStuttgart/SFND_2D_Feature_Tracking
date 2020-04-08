@@ -50,6 +50,6 @@ if (bFocusOnVehicle)
 ```
 
 ### MP.4 Add more keypoint descriptors
-See code for more information.
+See code for more information. Caution: SIFT-keypoint detector does not work with ORB keypoint descriptor.
 
 ### MP.5 
