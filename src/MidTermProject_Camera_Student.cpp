@@ -47,6 +47,8 @@ void saveReport(std::vector<DetectionInfo> &combinationInfo)
                 reportFile << ss.str();
             }
         }
+
+        // write results for each combination
         for (auto combination : combinationInfo) {
             ss.clear();
             ss.str("");
@@ -145,21 +147,7 @@ int main(int argc, const char *argv[])
         cout << "Desc. Type: " << it->descriptorType << endl;
         cout << "Matcher Type: " << it->matcherType << endl;
         cout << "Selector Type: " << it->selectorType << endl;
-
-        /*Detector: SHITOMASI
-        Descriptor : BRIEF
-        Desc.Type : DES_BINARY
-        Matcher Type : MAT_BF
-        Selector Type : SEL_NN*/
-
-        if ((it->detector.compare("SHITOMASI") == 0)
-            && (it->descriptor.compare("BRIEF") == 0)
-            && (it->descriptorType.compare("DES_BINARY") == 0)
-            && (it->matcherType.compare("MAT_BF") == 0)
-            && (it->selectorType.compare("SEL_NN") == 0))
-            cout << "Problem";
-            
-
+        
         // clear Buffer
         dataBuffer.clear();        
 
