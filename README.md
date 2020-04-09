@@ -77,8 +77,21 @@ for (size_t i = 0; i < knn_matches.size(); i++)
 }
 ```
 
-### MP.7 Number of Keypoints for all images and distribution of their neighborhood size
+### MP.7 Number of Keypoints for all images
+The number of keypoints detected by each detector is recorded within a csv-file. Furthermore, the number of matched keypoints is compared to the number of detected keypoints within the preceding car's probable position. It can be seen, that the number of keypoints with HARRIS-detector are quite low, s.t. the quality of keypoint tracking may be influenced negatively.
 
-Your seventh task is to count the number of keypoints on the preceding vehicle for all 10 images and take note of the distribution of their neighborhood size. Do this for all the detectors you have implemented.
+### MP.8 Number of Keypoints with all possible combinations
+The results for this task are stored within the csv-file SFND_FeatureTracking_Report.csv. Three numbers of keypoints are stored within this table: 
+* total number of keypoints
+* keypoints within preciding car region
+* matched keypoints between two frames
+
+### MP.9 Log the runtime of each detector and descriptor and choose best three combinations
+The runtime stored within the csv-file SFND_FeatureTracking_Report.csv . For further analysis and better highlighting of relevant columns, the file is stored as Excel table SFND_Feature_Tracking_Report.xlsx within the results-folder. The FAST-detector is by factor 10 the fastest and should be considered for driver assistence / automated driving, since a fast reaction time of the car is needed in this area. Following combinations are the top 3 regarding the runtimes: 
+# | Detector | Descriptor
+-------------------------
+1 | FAST     | BRISK
+2 | FAST     | BRIEF
+3 | FAST     | ORB
 
 
