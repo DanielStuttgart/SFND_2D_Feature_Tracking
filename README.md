@@ -88,8 +88,8 @@ The results for this task are stored within the csv-file SFND_FeatureTracking_Re
 
 ### MP.9 Log the runtime of each detector and descriptor and choose best three combinations
 The runtime stored within the csv-file SFND_FeatureTracking_Report.csv . For further analysis and better highlighting of relevant columns, the file is stored as Excel table SFND_Feature_Tracking_Report.xlsx within the results-folder. The FAST-detector is by factor 10 the fastest and should be considered for driver assistence / automated driving, since a fast reaction time of the car is needed in this area. Following combinations are the top 3 regarding the runtimes: 
-# | Detector | Descriptor
--------------------------
+No. | Detector | Descriptor
+----|----------|---------
 1 | FAST     | BRISK
 2 | FAST     | BRIEF
 3 | FAST     | ORB
